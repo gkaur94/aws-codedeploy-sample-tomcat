@@ -80,4 +80,14 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
         }
         return configurer;
     }
+
+    @Bean
+    public Wishlist wishlist() {
+        final Wishlist wishlist = new Wishlist();
+        wishlist.add("Labrador");
+        wishlist.add("Pomeranian");
+        wishlist.add("Terrier");
+        wishlist.add("Cat");
+        return wishlist;
+    }
 }

@@ -81,6 +81,14 @@
         </div>
       </div>
     <% } %>
+    <div>
+        <h1> WishList</h1>
+              <ul>
+                <% for (final String wishlistItem : (List<String>) request.getAttribute("wishlist")) { %>
+                    <li> <%= wishlistItem %> </li>
+                <% } %>
+              </ul>
+    </div>
     <div class="jumbotron">
       <h1>Bespoke Suits for Dogs</h1>
       <p><i>Why can't your canine companion be classy too?</i></p>

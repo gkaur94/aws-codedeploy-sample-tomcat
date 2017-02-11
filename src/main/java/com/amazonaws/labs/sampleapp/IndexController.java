@@ -51,6 +51,9 @@ public class IndexController {
     @Autowired
     private AmazonAutoScaling autoScaling;
 
+    @Autowired
+    private Wishlist wishlist;
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String displayIndex(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
@@ -101,6 +104,7 @@ public class IndexController {
         }
         model.addAttribute("instanceIds", instanceIds);
         model.addAttribute("instanceStates", instanceStates);
+        model.addAttribute("wishlist", wishlist);
         return "/index";
     }
 
