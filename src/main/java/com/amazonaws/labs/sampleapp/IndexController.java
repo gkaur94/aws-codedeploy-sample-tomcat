@@ -104,7 +104,7 @@ public class IndexController {
         }
         model.addAttribute("instanceIds", instanceIds);
         model.addAttribute("instanceStates", instanceStates);
-        model.addAttribute("wishlist", wishlist);
+        model.addAttribute("wishlist", wishlist.getList());
         return "/index";
     }
 
